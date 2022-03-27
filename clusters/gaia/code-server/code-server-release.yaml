@@ -1,0 +1,35 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: code-server
+  namespace: code-server
+spec:
+  chart:
+    spec:
+      chart: ./ci/helm-chart
+      sourceRef:
+        kind: GitRepository
+        name: code-server
+  interval: 10m0s
+  values:
+    extraArgs:
+    - --auth
+    - none
+    image:
+      imagePullPolicy: Always
+      repository: devusb/code-server-plus
+      tag: latest
+    persistence:
+      enabled: true
+      existingClaim: nfs-mhelton
+    securityContext:
+      enabled: true
+      fsGroup: 1100
+      runAsUser: 1101
+    service:
+      port: 8100
+      type: LoadBalancer
+    volumePermissions:
+      enabled: false
+
