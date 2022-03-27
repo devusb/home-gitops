@@ -7,4 +7,9 @@ metadata:
 spec:
   interval: 10m0s
   url: https://github.com/coder/code-server
+  ignore: |
+    # exclude all
+    /*
+    # include charts directory
+    !/ci/helm-chart/  
 
