@@ -11,7 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: longhorn
-  interval: 1m0s
+  interval: 10m0s
   values:
     ingress:
       enabled: true
