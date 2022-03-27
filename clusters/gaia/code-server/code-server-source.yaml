@@ -7,6 +7,8 @@ metadata:
 spec:
   interval: 10m0s
   url: https://github.com/coder/code-server
+  ref:
+    branch: main
   ignore: |
     # exclude all
     /*
