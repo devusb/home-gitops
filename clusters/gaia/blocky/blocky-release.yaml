@@ -16,6 +16,8 @@ spec:
     service:
       dns-tcp:
         type: LoadBalancer
+        enabled: true
       dns-udp:
         type: LoadBalancer
+        enabled: true
 
