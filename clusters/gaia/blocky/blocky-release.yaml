@@ -43,4 +43,12 @@ spec:
         clientGroupsBlock:
           default:
             - ads
+      customDNS:
+          customTTL: 1h
+      mapping:
+          hass.local: 192.168.10.119
+          longhorn.local: 192.168.20.13
+          pihole.local: 192.168.20.120
+          r2d2.local: 192.168.99.101
+          unifi.local: 192.168.20.105 
 
