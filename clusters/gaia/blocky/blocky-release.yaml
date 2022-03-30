@@ -36,4 +36,11 @@ spec:
         mapping:
           local: 192.168.20.1
           .: 192.168.20.1
+      blocking:
+        blackLists:
+          ads:
+            - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+        clientGroupsBlock:
+          default:
+            - ads
 
