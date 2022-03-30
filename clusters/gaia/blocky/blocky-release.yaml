@@ -18,10 +18,10 @@ spec:
         type: LoadBalancer
         enabled: true
         annotations:
-          - metallb.universe.tf/allow-shared-ip: "blocky-dns"
+          metallb.universe.tf/allow-shared-ip: "blocky-dns"
       dns-udp:
         type: LoadBalancer
         enabled: true
         annotations:
-          - metallb.universe.tf/allow-shared-ip: "blocky-dns"
+          metallb.universe.tf/allow-shared-ip: "blocky-dns"
 
