@@ -17,7 +17,5 @@ spec:
       enabled: true
       host: longhorn.local
     persistence:
-      defaultClassReplicaCount: 1
-    defaultSettings:
-      createDefaultDiskLabeledNodes: true
+      defaultClassReplicaCount: 2
 
