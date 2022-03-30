@@ -13,8 +13,6 @@ spec:
         name: blocky
   interval: 10m0s
   values:
-    port: 53
-    httpPort: 4000
     service:
       dns-tcp:
         type: LoadBalancer
@@ -29,6 +27,8 @@ spec:
           metallb.universe.tf/allow-shared-ip: "blocky-dns"
           metallb.universe.tf/loadBalancerIPs: 192.168.20.10
     config: |
+      port: 53
+      httpPort: 4000
       upstream:
         default:
           - 1.1.1.1
