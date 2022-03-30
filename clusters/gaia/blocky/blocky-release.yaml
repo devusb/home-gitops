@@ -13,6 +13,8 @@ spec:
         name: blocky
   interval: 10m0s
   values:
+    port: 53
+    httpPort: 4000
     service:
       dns-tcp:
         type: LoadBalancer
