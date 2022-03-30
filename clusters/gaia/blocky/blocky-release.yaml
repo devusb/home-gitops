@@ -44,8 +44,8 @@ spec:
           default:
             - ads
       customDNS:
-          customTTL: 1h
-      mapping:
+        customTTL: 1h
+        mapping:
           hass.local: 192.168.10.119
           longhorn.local: 192.168.20.13
           pihole.local: 192.168.20.120
