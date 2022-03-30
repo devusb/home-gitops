@@ -27,9 +27,11 @@ spec:
           metallb.universe.tf/allow-shared-ip: "blocky-dns"
           metallb.universe.tf/loadBalancerIPs: 192.168.20.10
     config: |
+      upstream:
+        default:
+          - 1.1.1.1
       conditional:
         mapping:
           local: 192.168.20.1
-          .local: 192.168.20.1
           .: 192.168.20.1
 
