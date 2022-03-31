@@ -15,7 +15,7 @@ spec:
   values:
     ingress:
       enabled: true
-      host: longhorn.local
+      host: longhorn.gaia.local
     persistence:
       defaultClassReplicaCount: 2
 
