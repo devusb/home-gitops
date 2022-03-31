@@ -17,3 +17,6 @@ spec:
       enabled: false
     alertmanager:
       enabled: false
+    prometheus:
+      service:
+        type: LoadBalancer
