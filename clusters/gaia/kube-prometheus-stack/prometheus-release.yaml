@@ -22,7 +22,7 @@ spec:
       enabled: false
     prometheus:
       prometheusSpec:
-        retention: 1d
+        retention: 2d
         storageSpec:
           volumeClaimTemplate:
             spec:
