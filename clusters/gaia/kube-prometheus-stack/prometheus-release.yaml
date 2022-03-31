@@ -21,9 +21,6 @@ spec:
     alertmanager:
       enabled: false
     prometheus:
-      enabled: true
-      service:
-        type: LoadBalancer
       prometheusSpec:
         retention: 1d
         storageSpec:
