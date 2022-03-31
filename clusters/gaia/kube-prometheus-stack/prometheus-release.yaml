@@ -21,6 +21,7 @@ spec:
     alertmanager:
       enabled: false
     prometheus:
+      enabled: true
       service:
         type: LoadBalancer
       prometheusSpec:
@@ -29,7 +30,7 @@ spec:
         storageSpec:
           volumeClaimTemplate:
             spec:
-              storageClassName: longhorn
+              storageClassName: ""
               accessModes: ["ReadWriteOnce"]
               resources:
                 requests:
