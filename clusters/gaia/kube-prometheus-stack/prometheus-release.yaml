@@ -24,14 +24,3 @@ spec:
       enabled: true
       service:
         type: LoadBalancer
-      prometheusSpec:
-        retention: 3d
-        storageSpec:
-          volumeClaimTemplate:
-            spec:
-              storageClassName: ""
-              accessModes: ["ReadWriteOnce"]
-              resources:
-                requests:
-                  storage: 10Gi
-              selector: {}
