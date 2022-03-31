@@ -25,7 +25,7 @@ spec:
       service:
         type: LoadBalancer
       prometheusSpec:
-        retention: 3d
+        retention: 1d
         storageSpec:
           volumeClaimTemplate:
             spec:
