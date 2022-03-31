@@ -12,6 +12,9 @@ spec:
         kind: HelmRepository
         name: prometheus-community
   interval: 10m0s
+  upgrade:
+    remediation:
+      remediateLastFailure: true
   values:
     grafana:
       enabled: false
