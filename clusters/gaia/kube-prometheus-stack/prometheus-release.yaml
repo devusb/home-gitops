@@ -23,3 +23,14 @@ spec:
     prometheus:
       service:
         type: LoadBalancer
+      prometheusSpec:
+        retention: 3d
+        retentionSize: 5Gi
+        storageSpec:
+          volumeClaimTemplate:
+            spec:
+              storageClassName: longhorn
+              accessModes: ["ReadWriteOnce"]
+              resources:
+                requests:
+                  storage: 5Gi
