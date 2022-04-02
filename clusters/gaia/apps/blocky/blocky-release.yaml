@@ -29,10 +29,14 @@ spec:
     ingress:
       main:
         enabled: true
+        primary: true
+        annotations: {}
+        labels: {}
         hosts:
           -
             host: blocky.gaia.local
             paths:
+              -
                 path: /
                 pathType: Prefix
                 service:
