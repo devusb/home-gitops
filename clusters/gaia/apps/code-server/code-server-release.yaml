@@ -34,5 +34,7 @@ spec:
       enabled: false
     ingress:
       enabled: true
-      host: code-server.gaia.local
-
+      hosts:
+        - host: code-server.gaia.local
+          paths:
+            - /
