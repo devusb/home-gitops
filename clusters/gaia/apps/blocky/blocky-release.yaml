@@ -30,7 +30,13 @@ spec:
       main:
         enabled: true
         hosts:
-          - host: blocky.gaia.local
+            host: blocky.gaia.local
+            paths:
+                path: /
+                pathType: Prefix
+                service:
+                  name: blocky
+                  port: 4000
     config: |
       port: 53
       httpPort: 4000
