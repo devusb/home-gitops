@@ -30,6 +30,7 @@ spec:
       main:
         enabled: true
         hosts:
+          -
             host: blocky.gaia.local
             paths:
                 path: /
