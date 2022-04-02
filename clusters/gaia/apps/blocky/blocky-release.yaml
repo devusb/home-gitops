@@ -19,13 +19,13 @@ spec:
         enabled: true
         annotations:
           metallb.universe.tf/allow-shared-ip: "blocky-dns"
-          metallb.universe.tf/loadBalancerIPs: 192.168.20.10
+          metallb.universe.tf/loadBalancerIPs: 192.168.20.121
       dns-udp:
         type: LoadBalancer
         enabled: true
         annotations:
           metallb.universe.tf/allow-shared-ip: "blocky-dns"
-          metallb.universe.tf/loadBalancerIPs: 192.168.20.10
+          metallb.universe.tf/loadBalancerIPs: 192.168.20.121
     config: |
       port: 53
       httpPort: 4000
