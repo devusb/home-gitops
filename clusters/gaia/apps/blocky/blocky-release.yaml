@@ -30,7 +30,7 @@ spec:
       main:
         enabled: true
         hosts:
-          host: blocky.gaia.local
+          - host: blocky.gaia.local
     config: |
       port: 53
       httpPort: 4000
