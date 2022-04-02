@@ -66,5 +66,6 @@ spec:
           hass.local: 192.168.10.119
           gaia.local: 192.168.20.13
           r2d2.local: 192.168.99.101
-          unifi.local: 192.168.20.105 
+          unifi.local: 192.168.20.105
+          blocky.local: 192.168.20.120
 
