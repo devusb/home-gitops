@@ -27,9 +27,10 @@ spec:
           metallb.universe.tf/allow-shared-ip: "blocky-dns"
           metallb.universe.tf/loadBalancerIPs: 192.168.20.121
     ingress:
-      enabled: true
-      hosts:
-        host: blocky.gaia.local
+      main:
+        enabled: true
+        hosts:
+          host: blocky.gaia.local
     config: |
       port: 53
       httpPort: 4000
