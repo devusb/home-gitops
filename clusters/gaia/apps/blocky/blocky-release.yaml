@@ -30,14 +30,10 @@ spec:
       main:
         enabled: true
         primary: true
-        annotations: {}
-        labels: {}
         hosts:
-          -
-            host: blocky.gaia.local
+          - host: blocky.gaia.local
             paths:
-              -
-                path: /
+              - path: /
                 pathType: Prefix
                 service:
                   name: blocky
