@@ -29,7 +29,7 @@ spec:
       runAsUser: 1101
     service:
       port: 8100
-      type: LoadBalancer
+      type: ClusterIP
     volumePermissions:
       enabled: false
     ingress:
