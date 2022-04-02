@@ -32,4 +32,7 @@ spec:
       type: LoadBalancer
     volumePermissions:
       enabled: false
+    ingress:
+      enabled: true
+      host: code-server.gaia.local
 
