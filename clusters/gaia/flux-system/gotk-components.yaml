@@ -5216,7 +5216,7 @@ spec:
       securityContext:
         fsGroup: 1337
       serviceAccountName: helm-controller
-      terminationGracePeriodSeconds: 600
+      terminationGracePeriodSeconds: 900
       volumes:
       - emptyDir: {}
         name: temp
