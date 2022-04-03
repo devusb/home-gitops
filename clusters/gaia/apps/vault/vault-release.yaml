@@ -12,4 +12,9 @@ spec:
         kind: HelmRepository
         name: hashicorp
   interval: 5m0s
+  values:
+    server:
+      ha:
+        enabled: true
+        replicas: 2
 
