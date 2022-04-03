@@ -22,7 +22,7 @@ spec:
         protocol: layer2
     speaker:
       tolerations:
-      - effect: NoSchedule
-        key: system=true
-        operator: Exists
+        - effect: NoSchedule
+          key: system=true
+          operator: Exists
 
