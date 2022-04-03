@@ -33,4 +33,4 @@ spec:
       prometheusSpec:
         resources:
           requests:
-            memory: 750Mi
+            memory: 1Gi
