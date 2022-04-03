@@ -28,7 +28,7 @@ spec:
         - effect: "NoSchedule"
           key: "system"
           operator: "Equal"
-          value: "test"
+          value: "true"
       affinity: {}
       initContainers: []
 
