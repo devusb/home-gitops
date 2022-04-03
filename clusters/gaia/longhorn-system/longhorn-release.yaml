@@ -18,11 +18,4 @@ spec:
       host: longhorn.gaia.local
     persistence:
       defaultClassReplicaCount: 2
-    longhornManager:
-      priorityClass: ~
-      tolerations: []
-      - key: "key"
-        operator: "Equal"
-        value: "value"
-        effect: "NoSchedule"
 
