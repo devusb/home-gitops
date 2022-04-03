@@ -19,4 +19,10 @@ spec:
         replicas: 2
         raft:
           enabled: true
-
+      extraSecretEnvironmentVars:
+        - envName: AWS_SECRET_ACCESS_KEY
+          secretName: vault-kms
+          secretKey: AWS_SECRET_ACCESS_KEY
+        - envName: AWS_ACCESS_KEY_ID
+          secretName: vault-kms
+          secretKey: AWS_ACCESS_KEY_ID
