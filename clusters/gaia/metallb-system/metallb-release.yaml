@@ -21,7 +21,12 @@ spec:
         name: default
         protocol: layer2
     speaker:
-      tolerations:
-      - effect: NoSchedule
-        key: system=true
+      resources: {}
+        # limits:
+          # cpu: 100m
+          # memory: 100Mi
+      nodeSelector: {}
+      tolerations: []
+      affinity: {}
+      initContainers: []
 
