@@ -24,7 +24,9 @@ spec:
       image: {}
       resources: {}
       nodeSelector: {}
-      tolerations: []
+      tolerations:
+        - effect: NoSchedule
+          key: system=true
       affinity: {}
       initContainers: []
 
