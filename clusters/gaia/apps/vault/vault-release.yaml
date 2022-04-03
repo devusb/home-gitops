@@ -18,5 +18,5 @@ spec:
         enabled: true
         replicas: 2
         raft:
-          - enabled: true
+          enabled: true
 
