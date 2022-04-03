@@ -21,10 +21,11 @@ spec:
         name: default
         protocol: layer2
     speaker:
+      image:
+        repository: metallb/speaker
+        tag: v0.8.1
+        pullPolicy: IfNotPresent
       resources: {}
-        # limits:
-          # cpu: 100m
-          # memory: 100Mi
       nodeSelector: {}
       tolerations: []
       affinity: {}
