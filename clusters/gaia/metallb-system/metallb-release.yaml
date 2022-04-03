@@ -25,8 +25,10 @@ spec:
       resources: {}
       nodeSelector: {}
       tolerations:
-        - effect: NoSchedule
-          key: system=true
+        - effect: "NoSchedule"
+          key: "system"
+          operator: "Equal"
+          value: "test"
       affinity: {}
       initContainers: []
 
