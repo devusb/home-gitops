@@ -5,7 +5,7 @@ metadata:
   name: kube-prom
   namespace: monitoring
 spec:
-  timeout: 600
+  timeout: 600s
   chart:
     spec:
       chart: kube-prometheus-stack
