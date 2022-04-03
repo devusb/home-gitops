@@ -29,14 +29,3 @@ spec:
       enabled: false
     alertmanager:
       enabled: false
-    prometheus:
-      prometheusSpec:
-        retention: 2d
-        storageSpec:
-          volumeClaimTemplate:
-            spec:
-              storageClassName: longhorn
-              accessModes: ["ReadWriteOnce"]
-              resources:
-                requests:
-                  storage: 10Gi
