@@ -19,12 +19,12 @@ spec:
         replicas: 2
         raft:
           enabled: true
-        config: |
-          seal "awskms" {
-            region     = "us-east-1"
-            kms_key_id = "75f13e72-21e1-48b8-a2c3-d08038823d75"
-            endpoint   = "https://kms.us-east-1.amazonaws.com"
-          }
+          config: |
+            seal "awskms" {
+              region     = "us-east-1"
+              kms_key_id = "75f13e72-21e1-48b8-a2c3-d08038823d75"
+              endpoint   = "https://kms.us-east-1.amazonaws.com"
+            }
       extraSecretEnvironmentVars:
         - envName: AWS_SECRET_ACCESS_KEY
           secretName: vault-kms
