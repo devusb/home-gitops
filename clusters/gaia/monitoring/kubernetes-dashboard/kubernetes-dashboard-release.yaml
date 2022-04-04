@@ -30,11 +30,17 @@ spec:
     extraVolumes: []
     ingress:
       customPaths: []
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-staging
       enabled: true
       hosts:
-      - k8s-dash.gaia.local
+        - k8s-dash.gaia.devusb.us
       paths:
-      - /
+        - /
+      tls:
+        - secretName: kubernetes-dashboard-tls
+          hosts:
+            - k8s-dash.gaia.devusb.us
     labels: {}
     livenessProbe:
       initialDelaySeconds: 30
