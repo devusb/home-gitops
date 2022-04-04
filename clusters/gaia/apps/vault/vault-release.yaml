@@ -17,14 +17,18 @@ spec:
       ingress:
         enabled: true
         labels: {}
-        annotations: {}
+        annotations:
+          cert-manager.io/cluster-issuer: letsencrypt-staging
         ingressClassName: ""
         pathType: Prefix
         activeService: true
         hosts:
-          - host: vault.gaia.local
+          - host: vault.gaia.devusb.us
             paths: []
-        tls: []
+        tls:
+          - secretName: vault-tls
+            hosts:
+              - vault.gaia.devusb.us
       ha:
         enabled: true
         replicas: 2

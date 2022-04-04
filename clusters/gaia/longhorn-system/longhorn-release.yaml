@@ -15,7 +15,11 @@ spec:
   values:
     ingress:
       enabled: true
-      host: longhorn.gaia.local
+      host: longhorn.gaia.devusb.us
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-staging
+      tls: true
+      tlsSecret: longhorn-tls
     persistence:
       defaultClassReplicaCount: 2
 
