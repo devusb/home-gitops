@@ -17,7 +17,7 @@ spec:
       enabled: true
       host: longhorn.gaia.devusb.us
       annotations:
-        cert-manager.io/cluster-issuer: letsencrypt-staging
+        cert-manager.io/cluster-issuer: letsencrypt-prod
       tls: true
       tlsSecret: longhorn-tls
     persistence:
