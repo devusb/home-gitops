@@ -34,7 +34,13 @@ spec:
       enabled: false
     ingress:
       enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+      tls:
+        - secretName: code-server-tls
+          hosts:
+            - code.gaia.devusb.us
       hosts:
-        - host: code-server.gaia.local
+        - host: code.gaia.devusb.us
           paths:
             - /
