@@ -31,7 +31,7 @@ spec:
     ingress:
       customPaths: []
       annotations:
-        cert-manager.io/cluster-issuer: letsencrypt-staging
+        cert-manager.io/cluster-issuer: letsencrypt-prod
       enabled: true
       hosts:
         - k8s-dash.gaia.devusb.us
