@@ -24,7 +24,7 @@ spec:
       image: {}
       resources: {}
       nodeSelector: {}
-      tolerations: {}
+      tolerations: []
       affinity: {}
       initContainers: []
 
