@@ -20,6 +20,14 @@ spec:
       annotations:
         kompose.cmd: kompose convert -f go-rss-pushover.yaml
         kompose.version: 1.26.1 (HEAD)
+        vault.hashicorp.com/agent-inject: 'true'
+        vault.hashicorp.com/role: 'rpilocator'
+        vault.hashicorp.com/agent-inject-secret-config: 'secret/data/rss-pushover/rpilocator'
+        vault.hashicorp.com/agent-inject-template-config: |
+          {{ with secret "secret/data/rss-pushover/rpilocator" -}}
+            export PUSHOVER_TOKEN="{{ .Data.data.token }}"
+            export PUSHOVER_USER="{{ .Data.data.user }}"
+          {{- end }}
       creationTimestamp: null
       labels:
         io.kompose.service: rpilocator
@@ -30,19 +38,11 @@ spec:
               value: "0"
             - name: FEED_URL
               value: https://rpilocator.com/feed.rss
-            - name: PUSHOVER_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: pushover-rpilocator
-                  key: token
-            - name: PUSHOVER_USER
-              valueFrom:
-                secretKeyRef:
-                  name: pushover-rpilocator
-                  key: user
             - name: REFRESH_INTERVAL
               value: "1"
           image: devusb/go-rss-pushover:latest
+          args:
+            ['sh', '-c', 'source /vault/secrets/config && /go-rss-pushover']
           name: rpilocator
           resources: {}
       restartPolicy: Always
