@@ -22,4 +22,11 @@ spec:
       tlsSecret: longhorn-tls
     persistence:
       defaultClassReplicaCount: 2
+    longhornManager:
+      priorityClass: ~
+      tolerations:
+        - effect: "NoSchedule"
+          key: "node-role.kubernetes.io/master"
+          operator: "Exists"
+      nodeSelector: {}
 
