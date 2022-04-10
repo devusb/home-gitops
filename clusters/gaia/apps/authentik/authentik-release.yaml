@@ -1,0 +1,40 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: authentik
+  namespace: authentik
+spec:
+  chart:
+    spec:
+      chart: authentik
+      sourceRef:
+        kind: HelmRepository
+        name: authentik
+  interval: 5m0s
+  values:
+    authentik:
+      error_reporting:
+        enabled: true
+      postgresql:
+        password: lDOjcMdJ9Hfbp3Nwd6zTu062Q7akNJcPb1O0tyEUATHLqppwQ6
+      secret_key: cFbVqFZzSkC9K4pgDfS7Fhy8qQk7UpxvKekKxQkWkwxztAcxXs
+    ingress:
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+      enabled: true
+      hosts:
+      - host: authentik.gaia.devusb.us
+        paths:
+        - path: /
+          pathType: Prefix
+      tls:
+      - hosts:
+        - authentik.gaia.devusb.us
+        secretName: authentik-tls
+    postgresql:
+      enabled: true
+      postgresqlPassword: lDOjcMdJ9Hfbp3Nwd6zTu062Q7akNJcPb1O0tyEUATHLqppwQ6
+    redis:
+      enabled: true
+
