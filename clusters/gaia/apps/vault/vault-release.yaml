@@ -14,7 +14,7 @@ spec:
   interval: 5m0s
   values:
     server:
-      logLevel: "debug"
+      logLevel: "trace"
       tolerations:
         - effect: "NoSchedule"
           key: "node-role.kubernetes.io/master"
