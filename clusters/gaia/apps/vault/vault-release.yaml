@@ -13,6 +13,7 @@ spec:
         name: hashicorp
   interval: 5m0s
   values:
+    logLevel: "debug"
     server:
       tolerations:
         - effect: "NoSchedule"
