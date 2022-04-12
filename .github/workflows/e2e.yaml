@@ -27,9 +27,11 @@ jobs:
       - name: Install Flux in Kubernetes Kind
         run: flux install
       - name: Setup cluster reconciliation
+        env:
+          TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
           flux create source git flux-system \
-          --url=https://${{ secrets.ACCESS_TOKEN }}:x-oauth-basic@$github.com/{{ github.event.repository.full_name }} \
+          --url=https://${TOKEN}:x-oauth-basic@$github.com/{{ github.event.repository.full_name }} \
           --branch=${GITHUB_REF#refs/heads/}
           flux create kustomization flux-system \
           --source=flux-system \
