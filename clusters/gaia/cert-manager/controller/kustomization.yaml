@@ -1,7 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - cloudflare-external-secret.yaml
   - cert-manager-source.yaml
   - cert-manager-release.yaml
   - https://github.com/jetstack/cert-manager/releases/download/v1.8.0/cert-manager.yaml

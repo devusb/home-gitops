@@ -6,13 +6,13 @@ resources:
 - namespace.yaml
 
 # Deploy the repositories
-- repositories.yaml
+- external-secrets-source.yaml
 
 # Deploy the CRDs
 - deployment-crds.yaml
 
 # Deploy the operator
-- deployment.yaml
+- external-secrets-release.yaml
 
 # Deploy default Custom Resources from 'crs' directory
 # INFO: This depends on the CRDs deployment. Will happen after it
