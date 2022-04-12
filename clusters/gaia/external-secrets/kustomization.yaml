@@ -9,7 +9,7 @@ resources:
 - external-secrets-source.yaml
 
 # Deploy the CRDs
-- deployment-crds.yaml
+- external-secrets-crds.yaml
 
 # Deploy the operator
 - external-secrets-release.yaml
