@@ -10,6 +10,10 @@ jobs:
   kubernetes:
     runs-on: ubuntu-latest
     steps:
+      - name: Configure git
+        env:
+          TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: git config --global url."https://${TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup tools
