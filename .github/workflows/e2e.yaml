@@ -29,7 +29,7 @@ jobs:
       - name: Setup cluster reconciliation
         run: |
           flux create source git flux-system \
-          --url=${TOKEN}:x-oauth-basic@${{ github.event.repository.html_url }} \
+          --url=https://${{ secrets.ACCESS_TOKEN }}:x-oauth-basic@$github.com/{{ github.event.repository.full_name }} \
           --branch=${GITHUB_REF#refs/heads/}
           flux create kustomization flux-system \
           --source=flux-system \
