@@ -14,7 +14,7 @@ spec:
   interval: 5m0s
   values:
     image:
-      tag: "2022.3.3"
+      tag: "2022.4.1"
     authentik:
       error_reporting:
         enabled: true
