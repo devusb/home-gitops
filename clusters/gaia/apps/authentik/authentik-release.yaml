@@ -5,6 +5,19 @@ metadata:
   name: authentik
   namespace: authentik
 spec:
+  valuesFrom:
+    - kind: Secret
+      name: authentik-keys
+      valuesKey: postgres_passwd
+      targetPath: authentik.postgresql.password
+    - kind: Secret
+      name: authentik-keys
+      valuesKey: postgres_passwd
+      targetPath: postgresql.postgresqlPassword
+    - kind: Secret
+      name: authentik-keys
+      valuesKey: secret_key
+      targetPath: authentik.secret_key
   chart:
     spec:
       chart: authentik
@@ -18,9 +31,6 @@ spec:
     authentik:
       error_reporting:
         enabled: true
-      postgresql:
-        password: lDOjcMdJ9Hfbp3Nwd6zTu062Q7akNJcPb1O0tyEUATHLqppwQ6
-      secret_key: cFbVqFZzSkC9K4pgDfS7Fhy8qQk7UpxvKekKxQkWkwxztAcxXs
     ingress:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
@@ -36,7 +46,6 @@ spec:
         secretName: authentik-tls
     postgresql:
       enabled: true
-      postgresqlPassword: lDOjcMdJ9Hfbp3Nwd6zTu062Q7akNJcPb1O0tyEUATHLqppwQ6
     redis:
       enabled: true
 
