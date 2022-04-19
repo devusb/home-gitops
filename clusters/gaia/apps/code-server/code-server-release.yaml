@@ -16,6 +16,7 @@ spec:
     extraArgs:
     - --auth
     - none
+    - /home/coder/code-server
     image:
       imagePullPolicy: Always
       repository: devusb/code-server-plus
