@@ -46,6 +46,12 @@ spec:
         secretName: authentik-tls
     postgresql:
       enabled: true
+      image:
+        repository: postgres
+        tag: 11.13
     redis:
       enabled: true
+      image: 
+        repository: redis
+        tag: 6.2.5
 
