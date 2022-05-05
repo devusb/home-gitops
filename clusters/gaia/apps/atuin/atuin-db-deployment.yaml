@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - args:
-          ['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh']
+          ['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh && postgres']
         command: ['bash', '-c']  
         env:
         - name: POSTGRES_DB
