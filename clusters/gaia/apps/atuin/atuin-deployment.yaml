@@ -33,9 +33,9 @@ spec:
         io.kompose.service: atuin
     spec:
       containers:
-      - command: ['sh', '-c']
       - args:
           ['source /vault/secrets/config && /usr/local/bin/atuin server start']
+        command: ['bash', '-c']  
         env:
         - name: ATUIN_HOST
           value: 0.0.0.0
