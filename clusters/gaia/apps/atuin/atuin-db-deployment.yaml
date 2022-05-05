@@ -36,6 +36,7 @@ spec:
       securityContext:
         runAsUser: 999
         runAsGroup: 999
+        fsGroup: 999
       containers:
       - args:
           ['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh && postgres']
