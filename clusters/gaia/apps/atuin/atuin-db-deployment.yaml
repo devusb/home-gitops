@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - args:
-          ['bash', '-c', 'source /vault/secrets/config && docker-entrypoint.sh']
+          ['bash', '-c', 'source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh']
         env:
         - name: POSTGRES_DB
           value: atuin
