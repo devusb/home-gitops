@@ -33,6 +33,7 @@ spec:
         io.kompose.service: atuin
     spec:
       containers:
+      - command: ''
       - args:
           ['sh', '-c', 'source /vault/secrets/config && /usr/local/bin/atuin server start']
         env:
