@@ -39,12 +39,14 @@ spec:
         fsGroup: 999
       containers:
       - args:
-          #['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh && postgres']
-          ['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh && sleep 600']
+          ['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh && postgres']
+          #['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh && sleep 600']
         command: ['bash', '-c']  
         env:
         - name: POSTGRES_DB
           value: atuin
+          name: PGDATA
+          value: /var/lib/postgresql/data/pgdata
         image: postgres:14
         imagePullPolicy: ""
         name: atuin-db
