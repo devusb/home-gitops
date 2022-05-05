@@ -44,8 +44,8 @@ spec:
         image: ghcr.io/ellie/atuin:main
         imagePullPolicy: ""
         name: atuin
-        ports:
-        - containerPort: 8888
+        #ports:
+        #- containerPort: 8888
         resources: {}
         volumeMounts:
         - mountPath: /config
