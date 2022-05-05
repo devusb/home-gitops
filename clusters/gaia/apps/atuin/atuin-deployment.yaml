@@ -34,7 +34,8 @@ spec:
     spec:
       containers:
       - args:
-          ['source /vault/secrets/config && /usr/local/bin/atuin server start']
+          #['source /vault/secrets/config && /usr/local/bin/atuin server start']
+          ['source /vault/secrets/config && sleep 600']
         command: ['bash', '-c']  
         env:
         - name: ATUIN_HOST
