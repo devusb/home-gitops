@@ -43,7 +43,7 @@ spec:
         - name: ATUIN_OPEN_REGISTRATION
           value: "true"
         - name: ATUIN_PORT
-          value: 8888
+          value: "8888"
         image: ghcr.io/ellie/atuin:main
         imagePullPolicy: ""
         name: atuin

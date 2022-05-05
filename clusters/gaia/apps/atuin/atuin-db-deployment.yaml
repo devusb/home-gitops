@@ -38,8 +38,8 @@ spec:
       runAsGroup: 999
       containers:
       - args:
-          #['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh && postgres']
-          ['source /vault/secrets/config && sleep 600']
+          ['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh && postgres']
+          #['source /vault/secrets/config && sleep 600']
         command: ['bash', '-c']  
         env:
         - name: POSTGRES_DB
