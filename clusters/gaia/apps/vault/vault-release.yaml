@@ -15,10 +15,6 @@ spec:
   values:
     server:
       logLevel: "trace"
-      tolerations:
-        - effect: "NoSchedule"
-          key: "node-role.kubernetes.io/master"
-          operator: "Exists"
       ingress:
         enabled: true
         labels: {}
