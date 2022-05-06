@@ -16,6 +16,7 @@ spec:
     image:
       repository: postgres
       tag: 14
-    postgresql.auth.existingSecret: atuin-keys
+    auth:
+      existingSecret: atuin-keys
   interval: 1m0s
 
