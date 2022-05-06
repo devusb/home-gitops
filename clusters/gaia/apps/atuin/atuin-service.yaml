@@ -11,7 +11,7 @@ metadata:
   namespace: atuin
 spec:
   ports:
-  - name: "8888"
+  - name: "atuin"
     port: 8888
     targetPort: 8888
   selector:
