@@ -39,7 +39,7 @@ spec:
         fsGroup: 999
       containers:
       - args:
-          ['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh && postgres']
+          ['source /vault/secrets/config && bash /usr/local/bin/docker-entrypoint.sh && postgres']
           #['source /vault/secrets/config && /usr/local/bin/docker-entrypoint.sh && sleep 600']
         command: ['bash', '-c']  
         env:
