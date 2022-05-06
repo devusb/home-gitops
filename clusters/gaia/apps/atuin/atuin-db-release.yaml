@@ -13,10 +13,9 @@ spec:
         kind: HelmRepository
         name: bitnami
   values:
-    global:
-      image:
-        repository: postgres
-        tag: 14
-      postgresql.auth.existingSecret: atuin-keys
+    image:
+      repository: postgres
+      tag: 14
+    postgresql.auth.existingSecret: atuin-keys
   interval: 1m0s
 
