@@ -80,4 +80,5 @@ spec:
           unifi.local: 192.168.20.105
           blocky.local: 192.168.20.120
           plex.local: 192.168.20.130
+          media.local: 192.168.20.130
 
