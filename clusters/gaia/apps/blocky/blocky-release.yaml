@@ -14,6 +14,11 @@ spec:
   interval: 10m0s
   values:
     service:
+      main:
+        enabled: true
+        ports:
+          http:
+            port: 4000
       dns-tcp:
         type: LoadBalancer
         enabled: true
