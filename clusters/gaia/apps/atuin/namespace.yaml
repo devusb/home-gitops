@@ -4,4 +4,4 @@ kind: Namespace
 metadata:
   name: atuin
   labels:
-    tailscale: true
+    tailscale: "true"

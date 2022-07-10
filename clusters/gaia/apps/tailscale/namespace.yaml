@@ -4,4 +4,4 @@ kind: Namespace
 metadata:
   name: tailscale
   labels:
-    tailscale: true
+    tailscale: "true"
