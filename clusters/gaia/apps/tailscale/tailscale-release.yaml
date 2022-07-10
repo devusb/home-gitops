@@ -5,21 +5,21 @@ metadata:
   name: tailscale
   namespace: tailscale
 spec:
+  valuesFrom:
+    - kind: Secret
+      name: tailscale-key
+      valuesKey: AUTH_KEY
+      targetPath: config.authKey
   chart:
     spec:
-      chart: tailscale-subnet-router
+      chart: tailscale-relay
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: gtaylor
+        name: mvisonneau
   interval: 1m0s
   values:
-    image:
-      repository: tailscale/tailscale
-    tailscale:
-      auth:
-        secretName: tailscale-key
-      routes:
-        - "192.168.0.0/16"
-
+    config:
+      variables:
+        TAILSCALE_ADVERTISE_ROUTES: "192.168.0.0/16"
 
