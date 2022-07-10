@@ -22,5 +22,5 @@ spec:
     config:
       variables:
         TAILSCALE_ADVERTISE_ROUTES: "192.168.0.0/16"
-        TAILSCALE_ADVERTISE_EXIT_NODE: true
+        TAILSCALE_ADVERTISE_EXIT_NODE: "true"
 
