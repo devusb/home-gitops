@@ -14,6 +14,8 @@ spec:
         name: gtaylor
   interval: 1m0s
   values:
+    image:
+      repository: tailscale/tailscale
     tailscale:
       auth:
         secretName: tailscale-key
